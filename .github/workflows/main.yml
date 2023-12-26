@@ -1,0 +1,88 @@
+name: Build 🧱
+
+on:
+  push:
+    branches: [ master, ArchitectureTests ]
+  pull_request:
+    branches: [ master, ArchitectureTests ]
+  #workflow_dispatch:
+
+# permissions:
+#   pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+          
+      - name: Restore dependencies
+        run: dotnet restore ./Records.sln
+        
+      - name: Build
+        run: dotnet build ./Records.sln --verbosity minimal --configuration Release --no-restore -p:TreatWarningsAsErrors=true
+        
+      - name: Run tests
+        #run: dotnet test ./Records.sln --configuration Release --verbosity normal --no-restore --no-build --collect:"Code Coverage" --logger trx --results-directory ./coverage --settings:ms.runsettings.xml
+        run: dotnet test ./Records.sln --configuration Release --no-restore --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory ./coverage --settings:coverage.runsettings.xml
+
+      # - name: Coveralls
+      #   uses: coverallsapp/github-action@v2
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     format: cobertura
+      #     file: "coverage/**/coverage.cobertura.xml"
+
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0 #https://github.com/marketplace/actions/code-coverage-summary
+        with:
+          filename: "coverage/**/coverage.cobertura.xml"
+          badge: true
+          format: "markdown"
+          output: "both"
+          indicators: true
+          #thresholds: '60 80'
+
+      - name: Add Coverage PR Comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        if: github.event_name == 'pull_request' # If the repo is private, requires write permission: GitHub=>Repo=>Settings=>Actions=>General=>Workflow permissions=>(*) Read and write permissions.
+        with:
+          recreate: true
+          path: code-coverage-results.md
+
+      - name: Write to Job Summary
+        run: cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+
+  build-reportgenerator:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore
+      
+    - name: Test
+      run: dotnet test --no-restore --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory ./coverage
+
+    - name: Create code coverage report
+      run: |
+        dotnet tool install -g dotnet-reportgenerator-globaltool
+        reportgenerator -reports:coverage/**/coverage.cobertura.xml -targetdir:CoverageReport -reporttypes:'MarkdownSummaryGithub;Cobertura'
+
+    - name: Write to Job Summary
+      run: cat CoverageReport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY

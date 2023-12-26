@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.8.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Configuration.DependencyInjection\Records.Persons.Configuration.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Infra.Projection.sql\Records.Persons.Infra.Projection.sql.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Projection\Records.Persons.Projection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Mappings.DependencyInjection\Records.Shared.Infra.Mappings.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.MessageBroker.MassTransit.DI\Records.Shared.Infra.MessageBroker.MassTransit.DI.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.MessageBroker.MassTransit\Records.Shared.Infra.MessageBroker.MassTransit.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Outbox.Sql\Records.Shared.Infra.Outbox.Sql.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Persistence.DependencyInjection\Records.Shared.Infra.Persistence.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Projection.DependencyInjection\Records.Shared.Infra.Projection.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Quartz.DependencyInjection\Records.Shared.Infra.Quartz.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Quartz\Records.Shared.Infra.Quartz.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Redis.DependencyInjection\Records.Shared.Infra.Redis.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Serilog.DependencyInjection\Records.Shared.Infra.Serilog.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Swagger.DependencyInjection\Records.Shared.Infra.Swagger.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.IntegrationEvents\Records.Shared.IntegrationEvents.csproj" />
+  </ItemGroup>
+
+</Project>

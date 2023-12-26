@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Records.Shared.Infra.Persistence\Records.Shared.Infra.Persistence.csproj" />
+    <ProjectReference Include="..\Records.Shared.IntegrationEvents.Abstractions\Records.Shared.IntegrationEvents.Abstractions.csproj" />
+    <ProjectReference Include="..\Records.Shared.Messaging\Records.Shared.Messaging.csproj" />
+  </ItemGroup>
+
+</Project>

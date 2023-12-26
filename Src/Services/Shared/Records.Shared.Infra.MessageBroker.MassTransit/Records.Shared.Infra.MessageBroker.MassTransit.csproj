@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.1.2" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Records.Shared.Domain\Records.Shared.Domain.csproj" />
+    <ProjectReference Include="..\Records.Shared.Infra.Idempotence.Abstractions\Records.Shared.Infra.Idempotence.Abstractions.csproj" />
+    <ProjectReference Include="..\Records.Shared.Infra.MessageBroker.Abstractions\Records.Shared.Infra.MessageBroker.Abstractions.csproj" />
+    <ProjectReference Include="..\Records.Shared.Messaging\Records.Shared.Messaging.csproj" />
+  </ItemGroup>
+
+</Project>

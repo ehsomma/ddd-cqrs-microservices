@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Records.Shared.Infra.MessageBroker.Abstractions\Records.Shared.Infra.MessageBroker.Abstractions.csproj" />
+    <ProjectReference Include="..\Records.Shared.IntegrationEvents.Abstractions\Records.Shared.IntegrationEvents.Abstractions.csproj" />
+    <ProjectReference Include="..\Records.Shared.Messaging\Records.Shared.Messaging.csproj" />
+  </ItemGroup>
+
+</Project>

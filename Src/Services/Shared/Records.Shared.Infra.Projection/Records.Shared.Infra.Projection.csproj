@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\My.Data.InterceptableDbConnection\My.Data.InterceptableDbConnection.csproj" />
+    <ProjectReference Include="..\..\..\Core\My.System.Extensions\My.System.Extensions.csproj" />
+    <ProjectReference Include="..\Records.Shared.Configuration\Records.Shared.Configuration.csproj" />
+    <ProjectReference Include="..\Records.Shared.Projection.Abstractions\Records.Shared.Projection.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

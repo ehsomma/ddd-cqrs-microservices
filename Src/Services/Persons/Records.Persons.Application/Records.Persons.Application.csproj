@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="MassTransit.Abstractions" Version="8.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\My.System.Extensions\My.System.Extensions.csproj" />
+    <ProjectReference Include="..\..\Shared\Records.Shared.Application\Records.Shared.Application.csproj" />
+    <ProjectReference Include="..\..\Shared\Records.Shared.Infra.MessageBroker.MassTransit\Records.Shared.Infra.MessageBroker.MassTransit.csproj" />
+    <ProjectReference Include="..\..\Shared\Records.Shared.Infra.Persistence.Abstractions\Records.Shared.Infra.Persistence.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Shared\Records.Shared.IntegrationEvents\Records.Shared.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\Records.Persons.Domain\Records.Persons.Domain.csproj" />
+    <ProjectReference Include="..\Records.Persons.Dtos\Records.Persons.Dtos.csproj" />
+    <ProjectReference Include="..\Records.Persons.Reads\Records.Persons.Reads.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Countries\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Allows to see the internals (command handlers) clases into the test project. -->
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Persons.Tests.UnitTests</_Parameter1>
+    </AssemblyAttribute>
+    <!--<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>Countries.Tests.UnitTests</_Parameter1>
+    </AssemblyAttribute>-->
+  </ItemGroup>
+
+</Project>

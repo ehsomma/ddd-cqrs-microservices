@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.Rabbitmq" Version="7.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="7.0.1" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="7.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="7.0.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="7.1.0" />
+    <PackageReference Include="FluentValidation" Version="11.8.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.1" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="MassTransit" Version="8.1.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.1.2" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\Countries\Records.Countries.Infra.Client\Records.Countries.Infra.Client.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Application\Records.Persons.Application.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Configuration.DependencyInjection\Records.Persons.Configuration.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Contracts\Records.Persons.Contracts.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Infra.Persistence.Sql\Records.Persons.Infra.Persistence.Sql.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Infra.Reads.sql\Records.Persons.Infra.Reads.sql.csproj" />
+    <ProjectReference Include="..\..\Services\Persons\Records.Persons.Reads\Records.Persons.Reads.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Application.DependencyInjection\Records.Shared.Application.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Contracts.Abstractions\Records.Shared.Contracts.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Http.DependencyInjection\Records.Shared.Infra.Http.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Mappings.DependencyInjection\Records.Shared.Infra.Mappings.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.MessageBroker.MassTransit.DI\Records.Shared.Infra.MessageBroker.MassTransit.DI.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Outbox.Sql\Records.Shared.Infra.Outbox.Sql.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Persistence.DependencyInjection\Records.Shared.Infra.Persistence.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Reads.DependencyInjection\Records.Shared.Infra.Reads.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Redis.DependencyInjection\Records.Shared.Infra.Redis.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Serilog.DependencyInjection\Records.Shared.Infra.Serilog.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\Services\Shared\Records.Shared.Infra.Swagger.DependencyInjection\Records.Shared.Infra.Swagger.DependencyInjection.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,42 @@
+Represents the 
+
+/// <param name="mediator">MediatR library to send and handle commands and queries implementing CQRS.</param>
+/// <param name="unitOfWork">Manage a <see cref="IDbSession"/> to encapsulate a business transaction which can affect the database.</param>
+
+/// <exception cref="ArgumentNullException">When some argument for the constructor parameters is null.</exception>
+
+/// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
+
+
+[System.Diagnostics.CodeAnalysis.SuppressMessage(
+    "StyleCop.CSharp.OrderingRules",
+    "SA1201:Elements should appear in the correct order",
+    Justification = "Prefere to have the Build() inside the constructor region.")]
+	
+	
+[System.Diagnostics.CodeAnalysis.SuppressMessage(
+    "StyleCop.CSharp.MaintainabilityRules",
+    "SA1401:Fields should be private",
+    Justification = "I prefer to use it as field just in protected fields in base classes like Repository base class.")]
+//// ReSharper disable once InconsistentNaming
+
+
+#pragma warning disable  // Disable all warnings
+…
+#pragma warning restore  // Restore all warnings
+
+
+/// <summary>
+/// Bla bla bla (inherit the doc from a property into a param).
+/// </summary>
+/// <param name="aggregateId"><inheritdoc cref="AggregateId" path="/summary"/></param>
+
+
+/// <param name="configuration">Represents a set of key/value application configuration properties.</param>
+/// <param name="dbSession">Represents a session in the database/UOW that contains a connection and a transaction.</param>
+/// <exception cref="ArgumentNullException">When some argument for the constructor parameters is null.</exception>
+
+
+Projectors project (copy) data from "source" database to "projection" (read) database.
+
+/// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>

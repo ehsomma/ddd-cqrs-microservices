@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="MassTransit.Abstractions" Version="8.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\My.System.Extensions\My.System.Extensions.csproj" />
+    <ProjectReference Include="..\..\Shared\Records.Shared.Application\Records.Shared.Application.csproj" />
+    <ProjectReference Include="..\..\Shared\Records.Shared.Infra.MessageBroker.MassTransit\Records.Shared.Infra.MessageBroker.MassTransit.csproj" />
+    <ProjectReference Include="..\..\Shared\Records.Shared.IntegrationEvents\Records.Shared.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\Records.Countries.Domain\Records.Countries.Domain.csproj" />
+    <ProjectReference Include="..\Records.Countries.Dtos\Records.Countries.Dtos.csproj" />
+  </ItemGroup>
+
+</Project>

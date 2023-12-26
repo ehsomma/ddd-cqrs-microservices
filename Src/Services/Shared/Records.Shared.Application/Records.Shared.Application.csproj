@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <None Remove="Extensions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\My.System.Extensions\My.System.Extensions.csproj" />
+    <ProjectReference Include="..\Records.Shared.Domain\Records.Shared.Domain.csproj" />
+    <ProjectReference Include="..\Records.Shared.Infra.Persistence.Abstractions\Records.Shared.Infra.Persistence.Abstractions.csproj" />
+    <ProjectReference Include="..\Records.Shared.Messaging\Records.Shared.Messaging.csproj" />
+  </ItemGroup>
+
+</Project>

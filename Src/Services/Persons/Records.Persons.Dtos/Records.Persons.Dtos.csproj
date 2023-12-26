@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\..\..\stylecop.json" Link="stylecop.json" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Persons\Dtos\**" />
+    <Compile Remove="Persons\ReadModels\**" />
+    <EmbeddedResource Remove="Persons\Dtos\**" />
+    <EmbeddedResource Remove="Persons\ReadModels\**" />
+    <None Remove="Persons\Dtos\**" />
+    <None Remove="Persons\ReadModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Records.Shared.Infra.Swagger.Schemas\Records.Shared.Infra.Swagger.Schemas.csproj" />
+  </ItemGroup>
+
+</Project>
