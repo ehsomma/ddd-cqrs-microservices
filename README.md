@@ -1,4 +1,9 @@
-﻿# DDD, CQRS and Microservices chronicles<br><sup><sub><sup><sup>by a .Net developer</sup></sub></sup></sup>
+﻿[![.github/workflows/ci.yml](https://github.com/ehsomma/ddd-cqrs-microservices/actions/workflows/main.yml/badge.svg)](https://github.com/ehsomma/ddd-cqrs-microservices/actions/workflows/main.yml)
+[![Coverage Status](https://coveralls.io/repos/github/ehsomma/ddd-cqrs-microservices/badge.svg?branch=master)](https://coveralls.io/github/ehsomma/ddd-cqrs-microservices?branch=master)
+[![GitHub Issues](https://img.shields.io/github/issues/ehsomma/ddd-cqrs-microservices)](https://github.com/ehsomma/ddd-cqrs-microservices/issues)
+[![License](https://img.shields.io/badge/license-MIT-informational)](/LICENSE.txt)
+
+# DDD, CQRS and Microservices chronicles<br><sup><sub><sup><sup>by a .Net developer</sup></sub></sup></sup>
 
 (if you are a lazy reader, see: [tl;dr](#tldr))
 
