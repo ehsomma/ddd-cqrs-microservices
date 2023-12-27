@@ -2,9 +2,9 @@ name: Build 🧱
 
 on:
   push:
-    branches: [ master, ArchitectureTests ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, ArchitectureTests ]
+    branches: [ master ]
   #workflow_dispatch:
 
 # permissions:
