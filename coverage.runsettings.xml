@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- File name extension must be .runsettings -->
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <!-- Documentation: https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md#advanced-options-supported-via-runsettings -->
+        <Configuration>
+          <!--<Format>json,cobertura,lcov,teamcity,opencover</Format>-->
+          <Format>cobertura</Format>
+
+          <!-- Exclude does not work! Must exclude projects from -->
+          <Exclude>[Records.Countries.Application.*]*</Exclude>
+          <!--<Exclude>[coverlet.*.tests?]*,[*]Coverlet.Core*</Exclude>-->
+          <!-- [Assembly-Filter]Type-Filter -->
+          <!--<Include>[coverlet.*]*,[*]Coverlet.Core*</Include>-->
+          <!-- [Assembly-Filter]Type-Filter -->
+          <!--<ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute</ExcludeByAttribute>-->
+          <!--<ExcludeByFile>**/dir1/class1.cs,**/dir2/*.cs,**/dir3/**/*.cs,</ExcludeByFile>-->
+          <!-- Globbing filter -->
+          <!--<IncludeDirectory>../dir1/,../dir2/,</IncludeDirectory>-->
+          
+          <SingleHit>false</SingleHit>
+          <UseSourceLink>true</UseSourceLink>
+          <IncludeTestAssembly>false</IncludeTestAssembly>
+          <SkipAutoProps>true</SkipAutoProps>
+          <DeterministicReport>false</DeterministicReport>
+          <!--<ExcludeAssembliesWithoutSources>MissingAll,MissingAny,None</ExcludeAssembliesWithoutSources>-->
+          <ExcludeAssembliesWithoutSources>MissingAll</ExcludeAssembliesWithoutSources>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>
