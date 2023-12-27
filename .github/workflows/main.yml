@@ -32,12 +32,12 @@ jobs:
         #run: dotnet test ./Records.sln --configuration Release --verbosity normal --no-restore --no-build --collect:"Code Coverage" --logger trx --results-directory ./coverage --settings:ms.runsettings.xml
         run: dotnet test ./Records.sln --configuration Release --no-restore --no-build --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory ./coverage --settings:coverage.runsettings.xml
 
-      # - name: Coveralls
-      #   uses: coverallsapp/github-action@v2
-      #   with:
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     format: cobertura
-      #     file: "coverage/**/coverage.cobertura.xml"
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          format: cobertura
+          file: "coverage/**/coverage.cobertura.xml"
 
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.3.0 #https://github.com/marketplace/actions/code-coverage-summary
