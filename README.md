@@ -123,7 +123,7 @@ List<Person> persons = GetPersons(); // More technically readable.
 SQL Server Management Studio (or similar, just to run some scripts and data view).
 
 ### How to run it
-1. **Download** the this repo Xxxxxxxxxxxxxxxxxxxx from Github.
+1. **Download** this repo [ddd-cqrs-microservices](https://github.com/ehsomma/ddd-cqrs-microservices) from Github.
 2. **Open** `Records.sln` solution from Visual Studio.
 3. From the terminal, go to the `Infra` folder and execute the next command to **run Docker compose**. It will run `SQL Server`, `Redis` and `RabbitMQ` containers.
 
@@ -160,17 +160,20 @@ SQL Server Management Studio (or similar, just to run some scripts and data view
 7. 	**Run** the solution.<br>
 	That will show the Swagger UI of each API and the Health Checker UI.
 
-	![Health checker](Doc/healthchecker-ui.png)
+	<!-- ![Health checker](Doc/healthchecker-ui.png) -->
+	<img src="Doc/healthchecker-ui.png" alt="Health checker" style="width:540px;"/>
 
 8.	As a basic example, **run the next requests** from the Swagger UI to create a Country and then a Person:
 	
 	1.	From the **Records.Countries API**, execute the `POST /countries` request (with the default sample data) to create a Country:
 		
-		![countries-api](Doc/countries-api-ui.png)
+		<!-- ![countries-api](Doc/countries-api-ui.png) -->
+		<img src="Doc/countries-api-ui.png" alt="countries-api" style="width:540px;"/>
 	
 	2.	From the **Records.Persons API**, execute the `POST /persons` request (with the default sample data) to create a Person:
 		
-		![persons-api](Doc/persons-api-ui.png)
+		<!-- ![persons-api](Doc/persons-api-ui.png) -->
+		<img src="Doc/persons-api-ui.png" alt="persons-api" style="width:540px;"/>
 
 <!-- Decisions made -->
 ## <a id="decisions-made"/>Decisions made
