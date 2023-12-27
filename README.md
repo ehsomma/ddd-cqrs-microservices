@@ -491,7 +491,7 @@ While the purpose of this example is not code coverage, we wrote the following t
 
 <!-- Special thanks -->
 ## <a id="thanks"/>Special thanks
-I gained all the knowledge from books, courses, but above all, from blogs and videos of developers community who contribute their knowledge, and I couldn't stop to mention them:
+I gained all the knowledge from books, courses, but especially, from blogs and videos of developers community who contribute their knowledge, and I couldn't stop to mention them:
 
 > NOTE: This does not mean that what is implemented in this project exactly represents your opinions.
 
