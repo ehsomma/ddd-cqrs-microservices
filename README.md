@@ -29,7 +29,7 @@ A working example of DDD with microservices, CQRS and Write and Read databases. 
 * [How to run the project](#how-to-run)
 * [Decisions made](#decisions-made)
   * [Dapper or Entity Framework (EF)](#dapper-vs-ef)
-  * [MediatR library or custom implementation](#mediatr-vs-custom) 💪...🤔
+  * [MediatR library or custom implementation ("vanilla" CQRS)](#mediatr-vs-custom) 💪...🤔
   * [Exceptions or Result<> with Railway Oriented Programming (ROP)](#exceptions-vs-result) (not what you think!)
   * [Automapper, Mapster or manual mapping](#mappers)
   * [Same class name in different namespaces](#aliases)
@@ -195,7 +195,7 @@ We use 2 additional things to Dapper:
 
 	It is a custom wrapper around IDbConnection, which allows us to build a wrapped IDbCommand for logging/debugging or catch commands exceptions. This is necessary since after executing the query, if it fails, there is no way to see the executed query from Dapper. See: [InterceptedDbConnection.cs](Src/Core/My.Data.InterceptableDbConnection/InterceptedDbConnection.cs).
 
-### <a id="mediatr-vs-custom"/>MediatR library or custom implementation 💪...🤔
+### <a id="mediatr-vs-custom"/>MediatR library or custom implementation ("vanilla" CQRS) 💪...🤔
 When I started researching DDD (in .NET), I saw that everyone was using MediatR to implement CQRS and event handlers. So I tried it, implemented it, it worked perfectly and was super easy.
 	
 But one day, I found a blog from a developer who proposed... "[Why I don't use MediatR for CQRS](https://cezarypiatek.github.io/post/why-i-dont-use-mediatr-for-cqrs)" 
