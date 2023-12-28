@@ -436,7 +436,7 @@ For our project, undoubtedly  the best option is option 3 (because the amount of
 Source: [Microsoft on Microservices](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/domain-events-design-implementation#domain-events-versus-integration-events).
 
 We decided to follow the above documentation precisely, using synchronous `domain events` (with MediatR) and asynchronous `integration events` (with MassTransit/RabbitMQ) with "eventual consistency." However, you can use both domain and integration events asynchronously with eventual consistency.<br>
-What we do is handle both domain and integration events using messages, as explained in: [Events/Messages properties](#message-metadata).
+What we do is handle both domain and integration events using messages, as explained in: [Events/Messages metadata](#message-metadata).
 	
 #### Integration events considerations (eventual consistency)
 I wish it were as simple as renaming DomainEvent to IntegrationEvent and that's it, but no! When using asynchronous integration events through a message broker, you need to keep the following in mind:
