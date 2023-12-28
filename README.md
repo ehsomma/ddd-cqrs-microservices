@@ -7,7 +7,7 @@
 
 (if you are a lazy reader, see: [tl;dr](#tldr))
 
-There are many examples about DDD (Domain Driven Design) and Clean Architecture (or hexagonal, onion), others about CQRS, others about Microservices. There are many good and renowned authors on the subject, many different interpretations and implementations and probably, you have not seen two identical examples. Also, all these examples are about isolated topics since you can use DDD without Microservices or CQRS, or Microservices without DDD, etc. 
+There are many examples about **DDD** (Domain Driven Design) and **Clean Architecture** (or hexagonal, onion), others about **CQRS**, others about **Microservices**. There are many good and renowned authors on the subject, many different interpretations and implementations and probably, you have not seen two identical examples. Also, all these examples are about isolated topics since you can use DDD without Microservices or CQRS, or Microservices without DDD, etc. 
 This makes it challenging for me to make decisions when trying to implement and integrate all these topics together.
 
 In this example you will find how to combine all these architectures, guidelines, definitions and patterns in a 100% working project with a simple business logic.
