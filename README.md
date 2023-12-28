@@ -180,7 +180,8 @@ SQL Server Management Studio (or similar, just to run some scripts and data view
 Here I am not going to go into detail about what each thing is used for (you can see the definitions in the links above). But what I do want to talk about is my experiences with some important decisions and their foundations.
 
 ### <a id="dapper-vs-ef"/>Dapper or Entity Framework (EF)
-Added to this, (at that time) the 'entity data model' with its tedious diagram, the 'database-first' approach, the 'code-first' approach, plus migrations from version 4, then to 5, then to 6, and then EF Core, required changes everywhere and made everything more complicated and difficult to handle.
+Many use EF and it is perfect, I also used it in a large project and at first everything was ok. But as it grew and we began to need to optimize the queries and see what it was doing underneath, it started to get complicated.<br>
+Added to this, (at that time) the '**entity data model**' with its tedious diagram, the '**database-first**' approach, the '**code-first**' approach, plus **migrations** from version 4, then to 5, then to 6, and then EF Core, required changes everywhere and made everything more complicated and difficult to handle.
 Before moving on to the EF Core, we reached a point where we decided to stop and we changed to **Dapper**.
 
 My team and I had a lot of experience in T-SQL so it was a liberation!, and now I wouldn't change it for anything. Dapper is fast, simple and super complete and we never had a problem with version changes.
