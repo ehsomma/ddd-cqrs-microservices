@@ -190,7 +190,7 @@ We use 2 additional things to Dapper:
 1. [Dapper.Contrib](https://github.com/DapperLib/Dapper.Contrib):
 
 	It contains a number of helper methods for inserting, getting, updating and deleting records.<br>
-	Here is an example of "vanilla" Dapper and its optimization with Dapper.Contrib: Ver: [PersonRepository.cs](Src/Services/Persons/Records.Persons.Infra.Persistence.Sql/Persons/Repositories/PersonRepository.cs) in InsertAsync() method (Dapper.Contrib vs Dapper "vanilla").
+	Here is an example of "vanilla" Dapper and its optimization with Dapper.Contrib: See: [PersonRepository.cs](Src/Services/Persons/Records.Persons.Infra.Persistence.Sql/Persons/Repositories/PersonRepository.cs) in InsertAsync() method (Dapper.Contrib vs Dapper "vanilla").
 	
 2. A custom connection profiler: 				
 
@@ -300,7 +300,7 @@ UserDto destination = source.Adapt<UserDto>();
 | From           | To              | Obs., Links                                                                                                       |
 |----------------|-----------------|-------------------------------------------------------------------------------------------------------------------|
 | Data models    | Domain models   | We use .Load() here, not mappers                                                                                  |
-| Data models    | Read models     | Here we map directly with Dapper from thew SELECT to a ReadModel. See: GetPersonsWithSpecificProfileRepository.cs |
+| Data models    | Read models     | Here we map directly with Dapper from thew SELECT to a ReadModel. See: [GetPersonsWithSpecificProfileRepository.cs](Src/Services/Persons/Records.Persons.Infra.Reads.sql/Persons/GetPersonsWithSpecificProfile/GetPersonsWithSpecificProfileRepository.cs) |
 
 #### Conclusion
 It's a matter of taste here, you can choose any option (Automapper, Mapster, manual or another mapper), mine was Mapster.
@@ -505,8 +505,8 @@ I gained all the knowledge from books, courses, but especially, from blogs and v
 > NOTE: This does not mean that what is implemented in this project exactly represents your opinions.
 
 * [Eric Evans](https://twitter.com/ericevans0?lang=en), [Robert C. Martin](https://twitter.com/unclebobmartin), [Martin Fowler](https://twitter.com/martinfowler).
+* **Damián Eiff**: The person who started me and motivated me to use DDD. https://www.linkedin.com/in/damianeiff/ 
 * **Milan Jovanović**: Excellent YouTube channel focused on .NET, architecture and DDD. https://www.youtube.com/@MilanJovanovicTech.
 * **NetMentor**: Programming, .NET and distributed systems (Spanish). https://www.youtube.com/@NetMentor
 * **CodelyTV**: A lot about DDD and clean architecture (Spanish): https://www.youtube.com/@CodelyTV
 * **Amichai Mantinband**: The creator of Throw library! https://www.youtube.com/@amantinband
-* **Damián Eiff**: The person who started me and motivated me to use DDD. https://www.linkedin.com/in/damianeiff/ 
