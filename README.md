@@ -5,6 +5,8 @@
 
 # DDD, CQRS and Microservices chronicles<br><sup><sub><sup><sup>by a .Net developer</sup></sub></sup></sup>
 
+![Cover](Doc/chronicals-of-DDD_final.png)
+
 (if you are a lazy reader, see: [tl;dr](#tldr))
 
 There are many examples about **DDD** (Domain Driven Design) and **Clean Architecture** (or hexagonal, onion), others about **CQRS**, others about **Microservices**. There are many good and renowned authors on the subject, many different interpretations and implementations and probably, you have not seen two identical examples. Also, all these examples are about isolated topics since you can use DDD without Microservices or CQRS, or Microservices without DDD, etc. 

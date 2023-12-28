@@ -186,6 +186,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persons.Tests.ArchitectureT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{1201C68E-31EA-45F2-B163-EC263408ADCD}"
 	ProjectSection(SolutionItems) = preProject
+		Doc\chronicals-of-DDD_final.png = Doc\chronicals-of-DDD_final.png
 		Doc\countries-api-ui.png = Doc\countries-api-ui.png
 		Doc\docker.png = Doc\docker.png
 		Doc\eventual-consistency.png = Doc\eventual-consistency.png
