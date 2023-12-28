@@ -182,7 +182,7 @@ Here I am not going to go into detail about what each thing is used for (you can
 ### <a id="dapper-vs-ef"/>Dapper or Entity Framework (EF)
 Many use EF and it is perfect, I also used it in a large project and at first everything was ok. But as it grew and we began to need to optimize the queries and see what it was doing underneath, it started to get complicated.<br>
 Added to this, (at that time) the '**entity data model**' with its tedious diagram, the '**database-first**' approach, the '**code-first**' approach, plus **migrations** from version 4, then to 5, then to 6, and then EF Core, required changes everywhere and made everything more complicated and difficult to handle.
-Before moving on to the EF Core, we reached a point where we decided to stop and we changed to **Dapper**.
+Before moving on to the EF Core, we reached a point where we decided to stop and we changed to [Dapper](https://github.com/DapperLib/Dapper).
 
 My team and I had a lot of experience in T-SQL so it was a liberation!, and now I wouldn't change it for anything. Dapper is fast, simple and super complete and we never had a problem with version changes.
 
